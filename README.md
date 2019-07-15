@@ -1,13 +1,13 @@
-# Python-Learning
+#Python-Learning
 #haha, just entertain myself
 
-# 读取数据
+#读取数据
 f = open('/Users/zhouyou/Desktop/Practice/sp.csv','r', encoding = 'utf8')
 for i in f.readlines()[:10]:     #读取前十条
     print(i.split(',')[-1].split('                                '))       #每条按照 ','切分，选择分开后的第n项
 f.seek(0)                        #光标回到第一行
 
-# 清洗数据
+#清洗数据
 def fcm(s):
     if '条' in s:
         return(int(s.split(' ')[0]))  #按照' '切分，选择分开后的第1项
@@ -51,7 +51,7 @@ for i in f.readlines()[1:10]:
     env = fcl(data[-1].split('                                '))[1]
     ser = fcl(data[-1].split('                                '))[2]
 
-   # print(name,com_count,star,price,add,qua,env,ser)
+  #print(name,com_count,star,price,add,qua,env,ser)
 
     if '缺失数据' not in [com_count,price,qua]:
         n += 1
